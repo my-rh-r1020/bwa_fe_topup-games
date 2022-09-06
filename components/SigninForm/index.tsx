@@ -1,8 +1,11 @@
 import React from "react";
 
 import TextInput from "../TextInput";
+import Button from "../Buttons";
 
 export default function SigninForm() {
+  // Handle Change
+  const handleChange = () => {};
   return (
     <form action="">
       <div className="container mx-auto">
@@ -28,11 +31,12 @@ export default function SigninForm() {
         </div>
         <h2 className="text-4xl fw-bold color-palette-1 mb-10">Sign In</h2>
         <p className="text-lg color-palette-1 m-0">Masuk untuk melakukan proses top up</p>
-        {/* Email */}
-        <TextInput label={"Email"} type={"email"} name={"email"} value={"email"} placeholder={"Insert your email"} onChange={onchange} />
 
+        {/* Email */}
+        <TextInput label={"Email"} type={"email"} name={"email"} value={"email"} placeholder={"Insert your email"} onChange={handleChange} />
         {/* Password */}
         <TextInput label={"Password (6 characters)"} type={"password"} name={"password"} value={"password"} placeholder={"Type your password"} onChange={onchange} />
+
         <div className="button-group d-flex flex-column mx-auto pt-50">
           <a className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16" href="../index.html" role="button">
             Continue to Sign In
