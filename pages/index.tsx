@@ -1,7 +1,6 @@
 // Import Library
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 // Import Components
 import Header from "../components/HeaderPage";
