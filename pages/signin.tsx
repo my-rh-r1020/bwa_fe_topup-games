@@ -1,5 +1,6 @@
 // Import Library
 import { NextPage } from "next";
+import Head from "next/head";
 
 // Import Components
 import SignPage from "../components/SigninPage";
@@ -7,8 +8,17 @@ import SignPage from "../components/SigninPage";
 // V1
 const Signin: NextPage = () => {
   return (
-    // Signin Page
-    <SignPage />
+    <>
+      <Head>
+        <title>StoreGG || Sign In</title>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* Signin Page */}
+      <SignPage />
+    </>
   );
 };
 
