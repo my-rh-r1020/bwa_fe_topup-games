@@ -4,7 +4,7 @@ export default function Story() {
   return (
     <>
       {/* Reached */}
-      <section className="reached pt-50 pb-50">
+      <section className="reached pt-50 pb-50" id="story">
         <div className="container-fluid">
           <div className="d-flex flex-lg-row flex-column align-items-center justify-content-center gap-lg-0 gap-4">
             <div className="me-lg-35">

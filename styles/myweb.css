@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* =================== LANDING PAGE CSS =================== */ /* Navbar */
+/* =================== LANDING PAGE CSS =================== */
+/* Navbar */
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
   font-weight: 500;
@@ -186,8 +187,6 @@ footer ul li a:hover {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   /* Header */
-
-  /*  */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -322,4 +321,61 @@ footer ul li a:hover {
   .sign-up input[type="email"] {
     max-width: 437px;
   }
+}
+
+/* =================== DETAIL PAGE CSS =================== */
+/* Details */
+.detail .img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.625rem;
+}
+
+.detail hr {
+  margin: 0;
+  background-color: #e7eaf5;
+  border: 0;
+  opacity: 1;
+}
+
+.detail input[type="text"] {
+  max-width: 437px;
+  border: 1px solid #0c145a;
+  padding: 0.75rem 1.625rem;
+  color: #0c145a;
+}
+
+.detail input[type="text"]:focus-within {
+  color: #0c145a;
+}
+
+.detail input[type="text"]::placeholder {
+  color: #ccd0dd;
+}
+
+.detail .detail-card {
+  transition: all 0.1s linear;
+  background-color: #f9faff;
+  border-radius: 1.625rem;
+  padding: 1.875rem;
+  cursor: pointer;
+}
+
+.detail input[type="radio"]:checked + .detail-card {
+  border: 2px solid #00baff;
+  background-color: rgba(0, 186, 255, 0.05);
+}
+
+.detail .detail-card #icon-check {
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+
+.detail input[type="radio"]:checked + .detail-card #icon-check {
+  opacity: 1;
+}
+
+.detail .btn-submit {
+  background-color: #4d17e2;
+  padding: 0.75rem 3rem;
 }

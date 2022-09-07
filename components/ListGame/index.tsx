@@ -3,7 +3,7 @@ import React from "react";
 
 export default function ListGame() {
   return (
-    <section className="featured-game pt-50 pb-50">
+    <section className="featured-game pt-50 pb-50" id="games">
       <div className="container-fluid">
         <h2 className="text-4xl fw-bold color-palette-1 mb-30">
           Our Featured
@@ -33,7 +33,7 @@ export default function ListGame() {
                 </div>
               </div>
             </Link> */}
-            <a href="./src/detail.html">
+            <a href="/detail">
               <div className="blur-sharp">
                 <img src="/images/Thumbnail-1.png" width="205" height="270" alt="" />
               </div>
@@ -56,7 +56,7 @@ export default function ListGame() {
             </a>
           </div>
           <div className="featured-game-card position-relative">
-            <a href="./src/detail.html">
+            <a href="/detail">
               <div className="blur-sharp">
                 <img src="/images/Thumbnail-2.png" width="205" height="270" alt="" />
               </div>
@@ -79,7 +79,7 @@ export default function ListGame() {
             </a>
           </div>
           <div className="featured-game-card position-relative">
-            <a href="./src/detail.html">
+            <a href="/detail">
               <div className="blur-sharp">
                 <img src="/images/Thumbnail-3.png" width="205" height="270" alt="" />
               </div>
@@ -102,7 +102,7 @@ export default function ListGame() {
             </a>
           </div>
           <div className="featured-game-card position-relative">
-            <a href="./src/detail.html">
+            <a href="/detail">
               <div className="blur-sharp">
                 <img src="/images/Thumbnail-4.png" width="205" height="270" alt="" />
               </div>
@@ -125,7 +125,7 @@ export default function ListGame() {
             </a>
           </div>
           <div className="featured-game-card position-relative">
-            <a href="./src/detail.html">
+            <a href="/detail">
               <div className="blur-sharp">
                 <img src="/images/Thumbnail-5.png" width="205" height="270" alt="" />
               </div>

@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import "../styles/globals.css";
 import "../styles/myweb.css";
+import "../styles/utilities.css";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {

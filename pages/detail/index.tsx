@@ -1,10 +1,11 @@
-import { NextPage } from "next";
 // Import Library
 import Head from "next/head";
+import { NextPage } from "next";
 
 // Import Components
+import Navbar from "../../components/Navbar";
+import DetailPage from "../../components/DetailPage";
 import Footer from "../../components/Footer";
-import Header from "../../components/HeaderPage";
 
 const DetailGame: NextPage = () => {
   return (
@@ -16,10 +17,11 @@ const DetailGame: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
-      <Header />
+      {/* Navbar */}
+      <Navbar />
 
       {/* Detail Content */}
+      <DetailPage />
 
       {/* Footer */}
       <Footer />

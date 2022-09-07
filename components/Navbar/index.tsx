@@ -31,29 +31,21 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
               <Link href="#" className="nav-item my-auto">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page">
                   Home
                 </a>
               </Link>
-              <Link href="#" className="nav-item my-auto">
-                <a className="nav-link" href="#">
-                  Games
-                </a>
+              <Link href="#feature" className="nav-item my-auto">
+                <a className="nav-link">Features</a>
               </Link>
-              <Link href="#" className="nav-item my-auto">
-                <a className="nav-link" href="#">
-                  Rewards
-                </a>
+              <Link href="#games" className="nav-item my-auto">
+                <a className="nav-link">Games</a>
               </Link>
-              <Link href="#" className="nav-item my-auto">
-                <a className="nav-link" href="#">
-                  Discover
-                </a>
+              <Link href="#story" className="nav-item my-auto">
+                <a className="nav-link">Stories</a>
               </Link>
               <Link href="#" className="nav-item my-auto me-lg-20">
-                <a className="nav-link" href="#">
-                  Global Rank
-                </a>
+                <a className="nav-link">Our Reviews</a>
               </Link>
               <Link href="/signin" className="nav-item my-auto">
                 <a className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill" role="button">
