@@ -1,3 +1,4 @@
+/* =================== LANDING PAGE CSS =================== */
 /* Navbar */
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .show > .nav-link {
@@ -18,7 +19,6 @@
   background-color: #e7eaf5;
   padding: 0.75rem 1.875rem;
 }
-/*  */
 
 /* Header */
 .header .header-title {
@@ -65,7 +65,6 @@
   left: auto;
   right: auto;
 }
-/*  */
 
 /* Feature */
 .feature .feature-card {
@@ -74,7 +73,6 @@
   border-radius: 1.625rem;
   margin-right: 16px;
 }
-/*  */
 
 /* Featured Game */
 .featured-game .overflow-setting {
@@ -132,8 +130,6 @@
   }
 }
 
-/*  */
-
 /* Reached */
 .reached .vertical-line {
   width: 1px;
@@ -146,7 +142,6 @@
   background-color: #e7eaf5;
   height: 1px;
 }
-/*  */
 
 /* Story */
 .story .btn-read {
@@ -158,7 +153,6 @@
   max-width: 100%;
   height: auto;
 }
-/*  */
 
 /* Footer */
 footer {
@@ -202,7 +196,6 @@ footer ul li a:hover {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
   }
-  /*  */
 
   /* Header */
   .header .underline-blue {
@@ -222,7 +215,6 @@ footer ul li a:hover {
     background: #00baff;
     z-index: -10;
   }
-  /*  */
 
   /* Featured Game */
   .featured-game .featured-game-card:hover .blur-sharp {
@@ -235,4 +227,98 @@ footer ul li a:hover {
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+}
+
+/* =================== SIGNIN PAGE CSS =================== */
+/* Sign-in */
+.sign-in .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.sign-in .bg-blue {
+  background-color: #1a1640;
+}
+
+.sign-in input[type="password"],
+.sign-in input[type="email"] {
+  border: 1px solid #0c145a;
+  padding: 0.75rem 1.625rem;
+  color: #0c145a;
+}
+
+.sign-in input[type="password"]:focus-within,
+.sign-in input[type="email"]:focus-within {
+  color: #0c145a;
+}
+
+.sign-in input[type="password"]::placeholder,
+.sign-in input[type="email"]::placeholder {
+  color: #ccd0dd;
+}
+
+.sign-in .btn-sign-in {
+  padding: 0.75rem;
+  background-color: #4d17e2;
+}
+
+.sign-in .btn-sign-up {
+  padding: 0.75rem;
+  background-color: #e7eaf5;
+}
+
+.sign-in .button-group {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .sign-in .container,
+  .sign-in input[type="password"],
+  .sign-in input[type="email"] {
+    max-width: 437px;
+  }
+}
+
+/* =================== SIGNUP PAGE CSS =================== */
+/* Sign Up */
+.sign-up input[type="password"],
+.sign-up input[type="email"],
+.sign-up input[type="text"] {
+  border: 1px solid #0c145a;
+  padding: 0.75rem 1.625rem;
+  color: #0c145a;
+}
+
+.sign-up input[type="password"]:focus-within,
+.sign-up input[type="email"]:focus-within,
+.sign-up input[type="text"]:focus-within {
+  color: #0c145a;
+}
+
+.sign-up input[type="password"]::placeholder,
+.sign-up input[type="email"]::placeholder,
+.sign-up input[type="text"]::placeholder {
+  color: #ccd0dd;
+}
+
+.sign-up .btn-sign-up {
+  padding: 0.75rem;
+  background-color: #4d17e2;
+}
+
+.sign-up .btn-sign-in {
+  padding: 0.75rem;
+  background-color: #e7eaf5;
+}
+
+.sign-up .button-group {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .sign-up .container,
+  .sign-up input[type="password"],
+  .sign-up input[type="email"] {
+    max-width: 437px;
+  }
 }

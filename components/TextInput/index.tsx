@@ -15,7 +15,7 @@ type TextInputProps = {
   name: string;
   placeholder: string;
   value: string;
-  onChange:
+  onChange: any;
 };
 
 const TextInput = ({ label, type, name, placeholder, value, onChange }: TextInputProps) => {

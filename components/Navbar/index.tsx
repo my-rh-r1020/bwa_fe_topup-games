@@ -1,6 +1,8 @@
+// Import Library
 import React from "react";
+import Link from "next/link";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <section>
       <nav className="navbar navbar-expand-lg navbar-light bg-light bg-white pt-lg-40 pb-lg-40 pt-30 pb-50">
@@ -28,41 +30,42 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
-              <li className="nav-item my-auto">
+              <Link href="#" className="nav-item my-auto">
                 <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
-              </li>
-              <li className="nav-item my-auto">
+              </Link>
+              <Link href="#" className="nav-item my-auto">
                 <a className="nav-link" href="#">
                   Games
                 </a>
-              </li>
-              <li className="nav-item my-auto">
+              </Link>
+              <Link href="#" className="nav-item my-auto">
                 <a className="nav-link" href="#">
                   Rewards
                 </a>
-              </li>
-
-              <li className="nav-item my-auto">
+              </Link>
+              <Link href="#" className="nav-item my-auto">
                 <a className="nav-link" href="#">
                   Discover
                 </a>
-              </li>
-              <li className="nav-item my-auto me-lg-20">
+              </Link>
+              <Link href="#" className="nav-item my-auto me-lg-20">
                 <a className="nav-link" href="#">
                   Global Rank
                 </a>
-              </li>
-              <li className="nav-item my-auto">
-                <a className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill" href="./src/sign-in.html" role="button">
+              </Link>
+              <Link href="/signin" className="nav-item my-auto">
+                <a className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill" role="button">
                   Sign In
                 </a>
-              </li>
+              </Link>
             </ul>
           </div>
         </div>
       </nav>
     </section>
   );
-}
+};
+
+export default Navbar;

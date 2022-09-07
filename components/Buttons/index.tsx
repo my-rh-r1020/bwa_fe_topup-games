@@ -1,7 +1,7 @@
 import React from "react";
 
 type ButtonProps = {
-  action: string;
+  action: any;
   children: string;
   className: string;
 };

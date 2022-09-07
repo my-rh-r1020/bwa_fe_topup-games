@@ -3,9 +3,14 @@ import React from "react";
 import TextInput from "../TextInput";
 import Button from "../Buttons";
 
-export default function SigninForm() {
-  // Handle Change
-  const handleChange = () => {};
+type SigninProps = {
+  form: any;
+  handleChange: any;
+  handleSubmit: any;
+  handleRouter: any;
+};
+
+const SigninForm = ({ form, handleChange, handleSubmit, handleRouter }: SigninProps) => {
   return (
     <form action="">
       <div className="container mx-auto">
@@ -33,22 +38,21 @@ export default function SigninForm() {
         <p className="text-lg color-palette-1 m-0">Masuk untuk melakukan proses top up</p>
 
         {/* Email */}
-        <TextInput label={"Email"} type={"email"} name={"email"} value={"email"} placeholder={"Insert your email"} onChange={handleChange} />
+        <TextInput label="Email Address" type="email" name="email" value={form.email} placeholder="Insert your email" onChange={handleChange} />
         {/* Password */}
-        <TextInput label={"Password (6 characters)"} type={"password"} name={"password"} value={"password"} placeholder={"Type your password"} onChange={onchange} />
+        <TextInput label="Password (6 characters)" type="password" name="password" value={form.password} placeholder="Type your password" onChange={handleChange} />
 
         <div className="button-group d-flex flex-column mx-auto pt-50">
-          <a className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16" href="../index.html" role="button">
+          <Button className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16" action={handleSubmit}>
             Continue to Sign In
-          </a>
-          {/* <button type="submit" className="btn btn-sign-in fw-medium text-lg text-white rounded-pill mb-16" role="button">
-            Continue to Sign In
-          </button> */}
-          <a className="btn btn-sign-up fw-medium text-lg color-palette-1 rounded-pill" href="../src/sign-up.html" role="button">
+          </Button>
+          <Button className="btn btn-sign-up fw-medium text-lg color-palette-1 rounded-pill" action={handleRouter}>
             Sign Up
-          </a>
+          </Button>
         </div>
       </div>
     </form>
   );
-}
+};
+
+export default SigninForm;
