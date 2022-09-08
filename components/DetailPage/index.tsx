@@ -1,6 +1,14 @@
+import { useRouter } from "next/router";
 import React from "react";
+import Button from "../Buttons";
 
 const DetailPage = () => {
+  const router = useRouter();
+
+  // Handle Submit
+  const handleSubmit = () => {
+    router.push("/checkout");
+  };
   return (
     <section className="detail pt-lg-60 pb-50">
       <div className="container-xxl container-fluid">
@@ -35,7 +43,7 @@ const DetailPage = () => {
             </div>
           </div>
           <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
-            <form action="./checkout.html" method="POST">
+            <form action="/checkout" method="POST">
               <div className="pt-md-10 pt-30">
                 <div>
                   <label className="form-label text-lg fw-medium color-palette-1 mb-10">Game Account</label>
@@ -50,8 +58,7 @@ const DetailPage = () => {
                     <div className="detail-card">
                       <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 m-0">
-                          <span className="fw-medium">125 </span>
-                          Gold
+                          <span className="fw-medium">125 </span>Gold
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
@@ -66,8 +73,7 @@ const DetailPage = () => {
                     <div className="detail-card">
                       <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 m-0">
-                          <span className="fw-medium">225 </span>
-                          Gold
+                          <span className="fw-medium">225 </span>Gold
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
@@ -82,8 +88,7 @@ const DetailPage = () => {
                     <div className="detail-card">
                       <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 m-0">
-                          <span className="fw-medium">350 </span>
-                          Gold
+                          <span className="fw-medium">350 </span>Gold
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
@@ -98,8 +103,7 @@ const DetailPage = () => {
                     <div className="detail-card">
                       <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 m-0">
-                          <span className="fw-medium">550 </span>
-                          Gold
+                          <span className="fw-medium">550 </span>Gold
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
@@ -114,8 +118,7 @@ const DetailPage = () => {
                     <div className="detail-card">
                       <div className="d-flex justify-content-between">
                         <p className="text-3xl color-palette-1 m-0">
-                          <span className="fw-medium">750 </span>
-                          Gold
+                          <span className="fw-medium">750 </span>Gold
                         </p>
                         <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
@@ -136,42 +139,42 @@ const DetailPage = () => {
                       <input className="d-none" type="radio" id="transfer" name="paymentMethod" value="transfer" />
                       <div className="detail-card">
                         <div className="d-flex justify-content-between">
-                          <p className="text-3xl color-palette-1 fw-medium m-0">Transfer</p>
+                          <p className="text-3xl color-palette-1 fw-medium m-0">Transfer Bank</p>
                           <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
                             <path d="M5.83301 10L8.46459 12.5L14.1663 7.5" stroke="#00BAFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                         </div>
-                        <p className="text-lg color-palette-1 m-0">Worldwide Available</p>
+                        <p className="text-lg color-palette-1 m-0">Bank Name</p>
                       </div>
                     </label>
                     <label className="col-lg-4 col-sm-6 ps-md-15 pe-md-15 pt-md-15 pb-md-15 pt-10 pb-10" htmlFor="visa">
                       <input className="d-none" type="radio" id="visa" name="paymentMethod" value="visa" />
                       <div className="detail-card">
                         <div className="d-flex justify-content-between">
-                          <p className="text-3xl color-palette-1 fw-medium m-0">VISA</p>
+                          <p className="text-3xl color-palette-1 fw-medium m-0">E-Money</p>
                           <svg id="icon-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="10" cy="10" r="10" fill="#CDF1FF" />
                             <path d="M5.83301 10L8.46459 12.5L14.1663 7.5" stroke="#00BAFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                         </div>
-                        <p className="text-lg color-palette-1 m-0">Credit Card</p>
+                        <p className="text-lg color-palette-1 m-0">E-Money Name</p>
                       </div>
                     </label>
                     <div className="col-lg-4 col-sm-6"></div>
                   </div>
                 </fieldset>
               </div>
-              <div className="pb-50">
+              {/* <div className="pb-50">
                 <label htmlFor="bankAccount" className="form-label text-lg fw-medium color-palette-1 mb-10">
                   Bank Account Name
                 </label>
                 <input type="text" className="form-control rounded-pill text-lg" id="bankAccount" name="bankAccount" aria-describedby="bankAccount" placeholder="Enter your Bank Account Name" />
-              </div>
+              </div> */}
               <div className="d-sm-block d-flex flex-column w-100">
-                <a href="./checkout.html" type="submit" className="btn btn-submit rounded-pill fw-medium text-white border-0 text-lg">
-                  Continue
-                </a>
+                <Button className="btn btn-submit rounded-pill fw-medium text-white border-0 text-lg" action={() => handleSubmit()}>
+                  Checkout Now
+                </Button>
               </div>
             </form>
           </div>
