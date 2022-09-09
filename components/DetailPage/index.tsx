@@ -1,9 +1,17 @@
+// Import Library
+import React, { useState } from "react";
 import { useRouter } from "next/router";
-import React from "react";
+
+// Import Components
 import Button from "../Buttons";
+import TextInput from "../TextInput";
 
 const DetailPage = () => {
+  const [form, setForm] = useState({ accountPlayer: "" });
   const router = useRouter();
+
+  // Handle Change
+  const handleChange = () => {};
 
   // Handle Submit
   const handleSubmit = () => {
@@ -44,12 +52,8 @@ const DetailPage = () => {
           </div>
           <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
             <form action="/checkout" method="POST">
-              <div className="pt-md-10 pt-30">
-                <div>
-                  <label className="form-label text-lg fw-medium color-palette-1 mb-10">Game Account</label>
-                  <input type="text" className="form-control rounded-pill text-lg" id="ID" name="ID" aria-describedby="verifyID" placeholder="Enter your account game" />
-                </div>
-              </div>
+              {/* Game Account Form */}
+              <TextInput label="Game Account" type="text" name="accountPlayer" placeholder="Enter your account game" value={form.accountPlayer} onChange={handleChange} />
               <div className="pt-md-50 pb-md-50 pt-30 pb-20">
                 <p className="text-lg fw-medium color-palette-1 mb-md-10 mb-0">Nominal Top Up</p>
                 <div className="row justify-content-between">
