@@ -323,6 +323,22 @@ footer ul li a:hover {
   }
 }
 
+.sign-up-success .img-fluid {
+  max-width: 66%;
+  height: auto;
+}
+
+.sign-up-success .btn-top-up {
+  padding: 0.75rem 1rem;
+  background-color: #4d17e2;
+}
+
+@media (min-width: 768px) {
+  .sign-up-success .button-group {
+    width: 170px;
+  }
+}
+
 /* =================== DETAIL PAGE CSS =================== */
 /* Details */
 .detail .img-fluid {
@@ -515,6 +531,23 @@ footer ul li a:hover {
 @media (min-width: 768px) {
   .complete-checkout .button-group {
     width: 250px;
+  }
+}
+
+/* =================== NOT FOUND PAGE CSS =================== */
+.not-found .img-fluid {
+  max-width: 66%;
+  height: auto;
+}
+
+.not-found .btn-homepage {
+  padding: 0.75rem;
+  background-color: #4d17e2;
+}
+
+@media (min-width: 768px) {
+  .not-found .button-group {
+    width: 190px;
   }
 }
 
