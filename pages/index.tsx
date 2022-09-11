@@ -1,6 +1,7 @@
 // Import Library
 import Head from "next/head";
 import type { NextPage } from "next";
+import { getData } from "../utils/fetchData";
 
 // Import Components
 import Header from "../components/HeaderPage";
@@ -8,7 +9,6 @@ import Features from "../components/Features";
 import ListGame from "../components/ListGame";
 import Story from "../components/Story";
 import Footer from "../components/Footer";
-import { getData } from "../utils/fetchData";
 
 const Home: NextPage = () => {
   return (
@@ -47,6 +47,8 @@ export async function getServerSideProps(context: any) {
   // Fetch data from API
   const reqServer = await getData("api/v1-player/player/landing"),
     res = await reqServer.data;
+
+  console.log(res);
 
   // Pass data via props
   return { props: { data: res } };
