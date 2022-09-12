@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextPage } from "next";
 
 // Import Component
-import NotFoundPage from "../components/NotFoundPage";
+import NotFoundPage from "../components/PagesComponents/NotFoundPage";
 
 const NotFound: NextPage = () => {
   return (

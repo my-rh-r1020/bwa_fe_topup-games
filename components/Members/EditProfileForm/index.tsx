@@ -2,8 +2,8 @@
 import React from "react";
 
 // Import Components
-import TextInput from "../../TextInput";
-import Button from "../../Buttons";
+import TextInput from "../../BasicComponents/TextInput";
+import Button from "../../BasicComponents/Buttons";
 
 type EditProfileProps = {
   form: any;

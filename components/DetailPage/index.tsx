@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 // Import Components
-import Button from "../Buttons";
-import TextInput from "../TextInput";
+import Button from "../BasicComponents/Buttons";
+import TextInput from "../BasicComponents/TextInput";
 
 const DetailPage = () => {
   const [form, setForm] = useState({ accountPlayer: "" });

@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import Head from "next/head";
 
 // Import Components
-import SignupPage from "../components/SignupPage";
+import SignupPage from "../components/PagesComponents/SignupPage";
 
 const Signup: NextPage = () => {
   return (

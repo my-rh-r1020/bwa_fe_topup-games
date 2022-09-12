@@ -1,6 +1,7 @@
 // Import Library
 import Head from "next/head";
 import type { NextPage } from "next";
+import { GetServerSideProps } from "next";
 import { getData } from "../utils/fetchData";
 
 // Import Components
@@ -42,14 +43,24 @@ const Home: NextPage = () => {
 
 export default Home;
 
-// Fetching Data
-export async function getServerSideProps(context: any) {
-  // Fetch data from API
-  const reqServer = await getData("api/v1-player/player/landing"),
-    res = await reqServer.data;
+// Fetch Data V1
+// export async function getServerSideProps(context: any) {
+//   // Fetch data from API
+//   const reqServer = await getData("api/v1-player/player/landing", context),
+//     res = reqServer.data;
 
-  console.log(res);
+//   // Pass data via props
+//   return { props: { data: res } };
+// }
 
-  // Pass data via props
-  return { props: { data: res } };
-}
+// Fetch Data V2 - TypeScript
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   // Fetch data from API
+//   const reqServer = await getData("api/v1-player/player/landing"),
+//     res = reqServer.data;
+
+//   console.log(res);
+
+//   // Pass data via props
+//   return { props: { data: res } };
+// };

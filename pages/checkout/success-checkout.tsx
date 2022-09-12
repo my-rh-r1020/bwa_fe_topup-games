@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextPage } from "next";
 
 // Import Component
-import SuccessCheckoutPage from "../../components/CheckoutPage/success-checkout";
+import SuccessCheckoutPage from "../../components/PagesComponents/CheckoutPage/success-checkout";
 
 const SuccessCheckout: NextPage = () => {
   return (

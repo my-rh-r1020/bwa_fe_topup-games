@@ -1,7 +1,7 @@
 import React from "react";
 
-import TextInput from "../TextInput";
-import Button from "../Buttons";
+import TextInput from "../../BasicComponents/TextInput";
+import Button from "../../BasicComponents/Buttons";
 
 type SignupProps = {
   form: any;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-import Button from "../Buttons";
+import Button from "../../BasicComponents/Buttons";
 
 export default function SuccessCheckoutPage() {
   const router = useRouter();

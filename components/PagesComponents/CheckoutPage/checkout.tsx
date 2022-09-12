@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/router";
 
 // Import Component
-import Button from "../Buttons";
+import Button from "../../BasicComponents/Buttons";
 
 export default function CheckoutPage() {
   const router = useRouter();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-import SignupForm from "../SignupForm";
+import SignupForm from "../../MiddleComponents/SignupForm";
 
 const SignupPage = () => {
   const [form, setForm] = useState({ name: "", username: "", email: "", password: "" }),
