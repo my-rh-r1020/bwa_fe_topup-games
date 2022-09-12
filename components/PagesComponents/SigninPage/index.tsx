@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import SigninForm from "../../MiddleComponents/SigninForm";
+import SigninForm from "../../FormComponents/SigninForm";
 
 const SignPage = () => {
   const [form, setForm] = useState({ email: "", password: "" }),

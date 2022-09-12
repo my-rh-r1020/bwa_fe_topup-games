@@ -3,9 +3,9 @@ import Head from "next/head";
 import { NextPage } from "next";
 
 // Import Components
-import Navbar from "../../components/Navbar";
-import DetailPage from "../../components/DetailPage";
-import Footer from "../../components/Footer";
+import Navbar from "../../components/PartsComponents/Navbar";
+import DetailPage from "../../components/PagesComponents/DetailPage";
+import Footer from "../../components/PartsComponents/Footer";
 
 const DetailGame: NextPage = () => {
   return (

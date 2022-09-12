@@ -5,11 +5,11 @@ import { GetServerSideProps } from "next";
 import { getData } from "../utils/fetchData";
 
 // Import Components
-import Header from "../components/HeaderPage";
-import Features from "../components/Features";
-import ListGame from "../components/ListGame";
-import Story from "../components/Story";
-import Footer from "../components/Footer";
+import Header from "../components/PagesComponents/HeaderPage";
+import Features from "../components/PartsComponents/Features";
+import ListGame from "../components/PartsComponents/ListGame";
+import Story from "../components/PartsComponents/Story";
+import Footer from "../components/PartsComponents/Footer";
 
 const Home: NextPage = () => {
   return (

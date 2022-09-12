@@ -1,5 +1,6 @@
-import Link from "next/link";
+// Import Library
 import React from "react";
+import Link from "next/link";
 
 export default function ListGame() {
   return (
