@@ -14,7 +14,7 @@ const SigninForm = ({ form, handleChange, handleSubmit, handleRouter }: SigninPr
   return (
     <form action="">
       {/* Email */}
-      <TextInput label="Email Address" type="email" name="email" value={form.email} placeholder="Insert your email" onChange={handleChange} />
+      <TextInput label="Email Address" type="email" name="email" placeholder="Enter your email address" value={form.email} onChange={handleChange} />
 
       {/* Password */}
       <TextInput label="Password (6 characters)" type="password" name="password" value={form.password} placeholder="Type your password" onChange={handleChange} />

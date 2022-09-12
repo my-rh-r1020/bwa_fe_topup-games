@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Story() {
@@ -55,9 +56,9 @@ export default function Story() {
                   pemenang sejati
                 </p>
                 <div className="d-md-block d-flex flex-column w-100">
-                  <a className="btn btn-read text-lg rounded-pill" href="#" role="button">
-                    Read Story
-                  </a>
+                  <Link href="#">
+                    <a className="btn btn-read text-lg rounded-pill">Read Story</a>
+                  </Link>
                 </div>
               </div>
             </div>
