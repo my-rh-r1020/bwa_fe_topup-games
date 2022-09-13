@@ -1,6 +1,5 @@
 // Import Library
 import React from "react";
-import Link from "next/link";
 
 // Import Components
 import ProfileUser from "./sidebarProfile";
