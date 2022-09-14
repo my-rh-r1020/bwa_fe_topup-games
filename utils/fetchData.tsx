@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // Fetch GET DATA from API
-export function getData(url: any, params: any, token: any) {
+export function getData(url: string, params?: any, token?: any) {
   return axios.get(`${url}`, { params, headers: { Authorization: `Bearer ${token}` } });
 }
 

@@ -1,18 +1,23 @@
 // Import Library
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+
+// Import Components
+import GameContent from "./gameContent";
+import { getDataFeaturesGame } from "../../../services/fetchData";
 
 export default function ListGame() {
   const [gameList, setGameList] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const resGame = await axios.get("https://bwa-topup-store.herokuapp.com/api/v1-player/player/landing");
+  // Callback Services
+  const getFeaturesGameList = useCallback(async () => {
+    const data = await getDataFeaturesGame();
+    setGameList(data);
+  }, []);
 
-      setGameList(resGame.data.data);
-    }
-    fetchData();
+  useEffect(() => {
+    getFeaturesGameList();
   }, []);
 
   return (
@@ -24,6 +29,7 @@ export default function ListGame() {
           Recommended
         </h2>
         <div className="d-flex flex-row flex-lg-wrap overflow-setting justify-content-lg-between gap-lg-3 gap-4" data-aos="fade-up">
+          {/* V1 */}
           {gameList.map((item) => (
             <div key={item._id} className="featured-game-card position-relative">
               <Link href="/detail">
@@ -51,6 +57,13 @@ export default function ListGame() {
               </Link>
             </div>
           ))}
+
+          {/* V2 */}
+          {/* {data.map((item: any, i: any) => (
+            
+            <GameContent key={i} urlImage={`https://bwa-topup-store.herokuapp.com/uploads/cover-games/${item.coverGames}`} gameName={item.gameName} gameCategory={item.gameCategory} />
+          ))} */}
+
           {/* <div className="featured-game-card position-relative">
             <Link href="/detail">
               <a>
@@ -181,15 +194,3 @@ export default function ListGame() {
     </section>
   );
 }
-
-// Fetch Data V2 - TypeScript
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   // Fetch data from API
-//   const reqServer = await getData("api/v1-player/player/landing"),
-//     res = reqServer.data;
-
-//   console.log(res);
-
-//   // Pass data via props
-//   return { props: { data: res } };
-// };
