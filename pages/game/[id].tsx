@@ -11,7 +11,7 @@ const DetailGame: NextPage = () => {
   return (
     <>
       <Head>
-        <title>StoreGG || Detail</title>
+        <title>StoreGG || Game</title>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />

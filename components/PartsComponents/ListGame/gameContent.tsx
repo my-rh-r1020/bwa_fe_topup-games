@@ -3,15 +3,16 @@ import Link from "next/link";
 
 type GameContentProps = {
   key: any;
+  href: string;
   urlImage: string;
   gameName: string;
   gameCategory: string;
 };
 
-export default function GameContent({ key, urlImage, gameName, gameCategory }: GameContentProps) {
+export default function GameContent({ key, href, urlImage, gameName, gameCategory }: GameContentProps) {
   return (
     <div key={key} className="featured-game-card position-relative">
-      <Link href="/detail">
+      <Link href={href}>
         <a>
           <div className="blur-sharp">
             <img src={urlImage} width="205" height="270" alt="cover-games" />
