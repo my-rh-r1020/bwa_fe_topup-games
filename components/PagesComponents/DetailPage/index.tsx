@@ -3,20 +3,18 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 // Import Components
-import CheckoutForm from "../../FormComponents/CheckoutForm";
 import { getDetailGame } from "../../../services/fetchData";
+import CheckoutForm from "../../FormComponents/CheckoutForm";
 import DetailGameItem from "../../PartsComponents/DetailGame/detailGame";
 
 const DetailPage = () => {
   // Use State
   const [form, setForm] = useState({ accountPlayer: "" }),
     [gameDetail, setGameDetail] = useState({
-      resultGame: {
-        gameName: "",
-        coverGames: "",
-        category: {
-          name: "",
-        },
+      gameName: "",
+      coverGames: "",
+      category: {
+        name: "",
       },
     }),
     // Use Router
@@ -25,7 +23,9 @@ const DetailPage = () => {
   // Callback API
   const getDetailGameData = useCallback(async (id: any) => {
     const data = await getDetailGame(id);
+
     setGameDetail(data.resultGame);
+    console.log(data.resultGame);
   }, []);
 
   // Use Effect
@@ -47,6 +47,7 @@ const DetailPage = () => {
   const handleSubmit = () => {
     // router.push("/checkout");
   };
+
   return (
     <section className="detail pt-lg-60 pb-50">
       <div className="container-xxl container-fluid">
