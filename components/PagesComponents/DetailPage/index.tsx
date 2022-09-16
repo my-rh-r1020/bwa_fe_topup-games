@@ -7,36 +7,38 @@ import { getDetailGame } from "../../../services/fetchData";
 import CheckoutForm from "../../FormComponents/CheckoutForm";
 import DetailGameItem from "../../PartsComponents/DetailGame/detailGame";
 
-const DetailPage = () => {
+const DetailPage = ({ data }: any) => {
+  const API_IMAGE = process.env.NEXT_PUBLIC_API_IMAGE;
   // Use State
   const [form, setForm] = useState({ accountPlayer: "" }),
-    [gameDetail, setGameDetail] = useState({
-      gameName: "",
-      coverGames: "",
-      category: {
-        name: "",
-      },
-    }),
+    // [gameDetail, setGameDetail] = useState({
+    //   gameName: "",
+    //   coverGames: "",
+    //   category: {
+    //     name: "",
+    //   },
+    // }),
     // Use Router
     { query, isReady } = useRouter();
 
-  // Callback API
-  const getDetailGameData = useCallback(async (id: any) => {
-    const data = await getDetailGame(id);
+  console.log(data.resultGame);
 
-    setGameDetail(data.resultGame);
-    console.log(data.resultGame);
-  }, []);
+  // Callback API
+  // const getDetailGameData = useCallback(async (id: any) => {
+  //   const data = await getDetailGame(id);
+
+  //   setGameDetail(data.resultGame);
+  // }, []);
 
   // Use Effect
-  useEffect(() => {
-    if (isReady) {
-      console.log("Router is ready to use", query.id);
-      getDetailGameData(query.id);
-    } else {
-      console.log("Router is not ready to use");
-    }
-  }, [isReady]);
+  // useEffect(() => {
+  //   if (isReady) {
+  //     console.log("Router is ready to use", query.id);
+  //     getDetailGameData(query.id);
+  //   } else {
+  //     console.log("Router is not ready to use");
+  //   }
+  // }, [isReady]);
 
   // Handle Change
   const handleChange = (e: any) => {
@@ -57,7 +59,7 @@ const DetailPage = () => {
         </div>
 
         <div className="row">
-          <DetailGameItem data={gameDetail} />
+          <DetailGameItem data={data} />
 
           <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
             {/* Checkout Form */}

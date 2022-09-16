@@ -26,3 +26,8 @@ export async function getDetailGame(id: any) {
 
   return res.data;
 }
+
+// Fetch Get Data API
+export function getData(url: string, params?: string, token?: any) {
+  return axios.get(`${url}`, { params, headers: { Authorization: `Bearer ${token}` } });
+}
