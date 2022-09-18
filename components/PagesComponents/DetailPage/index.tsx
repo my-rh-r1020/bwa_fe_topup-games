@@ -7,38 +7,29 @@ import { getDetailGame } from "../../../services/fetchData";
 import CheckoutForm from "../../FormComponents/CheckoutForm";
 import DetailGameItem from "../../PartsComponents/DetailGame/detailGame";
 
-const DetailPage = ({ data }: any) => {
-  const API_IMAGE = process.env.NEXT_PUBLIC_API_IMAGE;
+const DetailPage = () => {
   // Use State
   const [form, setForm] = useState({ accountPlayer: "" }),
-    // [gameDetail, setGameDetail] = useState({
-    //   gameName: "",
-    //   coverGames: "",
-    //   category: {
-    //     name: "",
-    //   },
-    // }),
+    [gameDetail, setGameDetail] = useState([]),
     // Use Router
     { query, isReady } = useRouter();
 
-  console.log(data.resultGame);
-
   // Callback API
-  // const getDetailGameData = useCallback(async (id: any) => {
-  //   const data = await getDetailGame(id);
+  const getDetailGameData = useCallback(async (id: any) => {
+    const data = await getDetailGame(id);
 
-  //   setGameDetail(data.resultGame);
-  // }, []);
+    setGameDetail(data.resultGame);
+  }, []);
 
   // Use Effect
-  // useEffect(() => {
-  //   if (isReady) {
-  //     console.log("Router is ready to use", query.id);
-  //     getDetailGameData(query.id);
-  //   } else {
-  //     console.log("Router is not ready to use");
-  //   }
-  // }, [isReady]);
+  useEffect(() => {
+    if (isReady) {
+      console.log("Router is ready to use", query.id);
+      getDetailGameData(query.id);
+    } else {
+      console.log("Router is not ready to use");
+    }
+  }, [isReady]);
 
   // Handle Change
   const handleChange = (e: any) => {
@@ -59,7 +50,9 @@ const DetailPage = ({ data }: any) => {
         </div>
 
         <div className="row">
-          <DetailGameItem data={data} />
+          <div className="col-xl-3 col-lg-4 col-md-5 pb-30 pb-md-0 pe-md-25 text-md-start">
+            <DetailGameItem data={gameDetail} />
+          </div>
 
           <div className="col-xl-9 col-lg-8 col-md-7 ps-md-25">
             {/* Checkout Form */}
